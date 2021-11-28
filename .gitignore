@@ -1,0 +1,39 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+modules.xml
+
+target/
+
+**/.idea
+**/*.iws
+**/*.iml
+**/*.ipr
+**/modules.xml
+
+
+**/mvnw
+**/mvnw.cmd
+**/.mvn
+**/target/
+**/.gitignore
+
+### Maven ###
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### Java ###
+# Compiled class file
+*.class
+————————————————
+版权声明：本文为CSDN博主「知北行」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_35077107/article/details/111319351
