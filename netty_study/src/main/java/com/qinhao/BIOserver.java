@@ -1,12 +1,12 @@
 package com.qinhao;
 
+import com.sun.corba.se.spi.orbutil.threadpool.WorkQueue;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * describ
@@ -19,7 +19,8 @@ import java.util.concurrent.Executors;
 public class BIOserver {
     public static void main(String[] args) throws IOException {
         //创建一个线程池
-        ExecutorService threadPool = Executors.newCachedThreadPool();
+//        ExecutorService threadPool = Executors.newCachedThreadPool();
+        ExecutorService threadPool = new ThreadPoolExecutor(8, 8, 1, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
 
         //创建服务器
         ServerSocket serverSocket = new ServerSocket(6666);
