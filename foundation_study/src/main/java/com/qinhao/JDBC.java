@@ -4,7 +4,9 @@ import com.mysql.cj.jdbc.Driver;
 import org.junit.Test;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 /**
@@ -18,11 +20,14 @@ public class JDBC {
     @Test
     public void Jdbc() throws SQLException {
         Driver driver = new Driver();
-        String url = "jdbc:mysql://localhost:3306/music?serverTimezone=UTC";
+        String url = "jdbc:mysql://localhost:3306/saas?serverTimezone=UTC";
         Properties info = new Properties();
         info.setProperty("user", "root");
         info.setProperty("password", "123456");
         Connection connect = driver.connect(url,info);
-        System.out.println(connect);
+        Statement statement = connect.createStatement();
+        ResultSet resultSet = statement.executeQuery("select * from event");
+        connect.close();
+        statement.close();
     }
 }
