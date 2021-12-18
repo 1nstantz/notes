@@ -8,7 +8,6 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.*;
 import com.itextpdf.tool.xml.XMLWorkerFontProvider;
 import com.itextpdf.tool.xml.XMLWorkerHelper;
-import com.sun.deploy.net.HttpUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
@@ -36,7 +35,7 @@ public class XhtmlToPdfUtils {
         String threadCurrentPath = (url == null) ? "" : url.getPath();
         // 2.如果线程路径为null,则使用当前类加载路径
         if(StringUtils.isBlank(threadCurrentPath)) {
-            path = HttpUtils.class.getClass().getResource("/").getPath();
+            path = XhtmlToPdfUtils.class.getClass().getResource("/").getPath();
         }
         // 3.拼接字体路径
         StringBuffer stringBuffer = new StringBuffer(path);

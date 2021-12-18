@@ -1,6 +1,5 @@
 package com.qinhao;
 
-import com.sun.corba.se.spi.orbutil.threadpool.WorkQueue;
 
 import java.io.IOException;
 import java.io.InputStream;
