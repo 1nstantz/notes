@@ -1,6 +1,5 @@
 package com.qinhao.springboot;
 
-import com.qinhao.springboot.mapper.UserMapper;
 import com.qinhao.springboot.pojo.User;
 import com.qinhao.springboot.service.UserService;
 import org.junit.Assert;
