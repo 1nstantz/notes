@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: userservice # 服务名称
+  profiles:
+    active: dev #开发环境，这里是dev
+  cloud:
+    nacos:
+      server-addr: 59.110.221.83:8848 # Nacos地址
+      # server-addr: localhost:80 # 只有搭建Nacos集群（linux）时候，才这么配置
+      config:
+        file-extension: yaml # 文件后缀名
+feign:
+  httpclient:
+    enabled: true # 支持HttpClient的开关
+    max-connections: 200 # 最大连接数
+    max-connections-per-route: 50 # 单个路径的最大连接数
+#  sentinel:
+#    enabled: true  开启sentinel监控feign客户端

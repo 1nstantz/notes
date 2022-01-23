@@ -19,7 +19,6 @@
         <module>netty_study</module>
         <module>algorithm_study</module>
         <module>design_pattern_study</module>
-        <module>springboot_study</module>
         <module>basis_study</module>
         <module>elasticsearch_study</module>
     </modules>
