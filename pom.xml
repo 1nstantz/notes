@@ -21,6 +21,7 @@
         <module>design_pattern_study</module>
         <module>basis_study</module>
         <module>elasticsearch_study</module>
+        <module>seata-demo</module>
     </modules>
 
     <build>
