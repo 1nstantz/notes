@@ -1,0 +1,17 @@
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  rabbitmq:
+    host: 192.168.254.129
+    port: 5672
+    username: root
+    password: 123456
+    virtual-host: /
+    #- `simple`：同步等待confirm结果，直到超时
+    #- `correlated`：异步回调，定义ConfirmCallback，MQ返回结果时会回调这个ConfirmCallback
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    #`template.mandatory`：定义消息路由失败时的策略。true，则调用ReturnCallback；false：则直接丢弃消息
+    template:
+      mandatory: true
