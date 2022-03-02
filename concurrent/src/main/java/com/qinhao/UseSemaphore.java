@@ -8,6 +8,12 @@ import java.util.concurrent.TimeUnit;
  * @date 2022/2/24 - 9:58
  */
 public class UseSemaphore {
+
+
+    /**
+     * 多个共享资源互斥的使用！并发限流，控制最大的线程数！
+     * @param args
+     */
     public static void main(String[] args) {
         //信号量，默认是非公平锁
         Semaphore semaphore = new Semaphore(3);
