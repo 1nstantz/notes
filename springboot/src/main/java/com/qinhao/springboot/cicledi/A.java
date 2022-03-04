@@ -15,7 +15,5 @@ public class A {
     private B b;
     public A(){
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAA");
-        TransactionInterceptor.currentTransactionStatus().setRollbackOnly();
-
     }
 }
