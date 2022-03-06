@@ -44,6 +44,8 @@ public class SelectServer {
                         
         				// 获取连接并处理，而且是必须处理，否则需要取消
                         SocketChannel socketChannel = channel.accept();
+                        //注册到selector
+                        socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
                         System.out.println("after accepting...");
                         
                         // 处理完毕后移除
