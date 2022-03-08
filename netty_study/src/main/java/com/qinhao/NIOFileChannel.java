@@ -19,7 +19,7 @@ public class NIOFileChannel {
         //创建缓冲区
         ByteBuffer buffer = ByteBuffer.allocate(32);
         //向缓冲区写入数据
-        buffer.put(new String("今天星期五").getBytes());
+        buffer.put("今天星期五".getBytes());
         //写模式切换为读模式
         buffer.flip();
         //从缓冲区读取数据

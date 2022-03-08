@@ -28,12 +28,7 @@ public class BIOserver {
             //链接客户端
             Socket socket = serverSocket.accept();
             System.out.println("链接一个客户端");
-            threadPool.execute(new Runnable() {
-                @Override
-                public void run() {
-                    handler(socket);
-                }
-            });
+            threadPool.execute(() -> handler(socket));
         }
     }
 
@@ -52,7 +47,6 @@ public class BIOserver {
                     break;
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
