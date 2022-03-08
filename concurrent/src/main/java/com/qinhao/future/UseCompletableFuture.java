@@ -18,12 +18,13 @@ public class UseCompletableFuture {
     public void useCompletableFuture() throws Exception {
         CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
             try {
-                Thread.sleep(4000);
+                TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             return "hello world";
         }, executor);
+
         System.out.println(future.get());  //阻塞的获取结果  ''helllo world"
     }
 
