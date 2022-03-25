@@ -1,5 +1,7 @@
 package com.qinhao.springboot.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.qinhao.springboot.pojo.User;
 import com.qinhao.springboot.mapper.UserMapper;
 import com.qinhao.springboot.service.UserService;
@@ -13,33 +15,6 @@ import java.util.List;
  * @date 2022/1/11 - 10:03
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper , User> implements UserService {
 
-    @Autowired
-    private UserMapper userMapper;
-
-    @Override
-    public int addOneUser(User user) {
-        return userMapper.insert(user);
-    }
-
-    @Override
-    public int deleteById(Long id) {
-        return userMapper.deleteById(id);
-    }
-
-    @Override
-    public Integer updateOneUser(User user) {
-        return userMapper.updateById(user);
-    }
-
-    @Override
-    public User getById(Long Id) {
-        return userMapper.selectById(Id);
-    }
-
-    @Override
-    public List<User> getAllTeacher() {
-        return userMapper.selectList(null);
-    }
 }
