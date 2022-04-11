@@ -1,8 +1,11 @@
 package com.qinhao.springboot.controller;
 
+import com.qinhao.springboot.pojo.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 
 /**
  * describ
@@ -17,5 +20,13 @@ public class TestContoller {
     public String getRequest() {
         log.info("=============>controller被访问了");
         return "hello world";
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Object> list = new ArrayList<>();
+        while (true) {
+            User user = new User();
+            //list.add(user);
+        }
     }
 }
