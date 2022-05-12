@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author qinhao
@@ -30,7 +31,7 @@ public class TestController {
     @PostConstruct
     public void initReidis() {
         System.out.println("设置库存为10");
-        redisTemplate.opsForValue().set("store",10);
+        redisTemplate.opsForValue().set("store",10,1, TimeUnit.HOURS);
     }
 
 
@@ -47,7 +48,7 @@ public class TestController {
             System.out.println("加锁成功，执行库存-1。线程 ID：" + Thread.currentThread().getId());
             redisTemplate.opsForValue().decrement("store",1);
             System.out.println("库存为：" + redisTemplate.opsForValue().get("store"));
-            Thread.sleep(10000);
+            Thread.sleep(3000);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
