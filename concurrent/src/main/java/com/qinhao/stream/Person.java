@@ -1,9 +1,11 @@
 package com.qinhao.stream;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-class Person {
+@NoArgsConstructor
+public class Person {
 	private String name;  // 姓名
 	private int salary; // 薪资
 	private int age; // 年龄
