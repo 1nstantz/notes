@@ -14,7 +14,8 @@ public class Server {
         // 获得服务器通道
         try(ServerSocketChannel server = ServerSocketChannel.open()) {
             // 为服务器通道绑定端口
-            server.bind(new InetSocketAddress(6666));
+            server.bind(new InetSocketAddress(6666
+            ));
             // 用户存放连接的集合
             ArrayList<SocketChannel> channels = new ArrayList<>();
             // 循环接收连接

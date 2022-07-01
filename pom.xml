@@ -31,8 +31,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.1</version><!--$NO-MVN-MAN-VER$ -->
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>8</source>
+                    <target>8</target>
                     <encoding>UTF-8</encoding><!-- 指定编码格式，否则在DOS下运行mvn compile命令时会出现莫名的错误，因为系统默认使用GBK编码 -->
                 </configuration>
             </plugin>
