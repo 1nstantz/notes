@@ -1,4 +1,4 @@
-package com.qinhao.springsecuritydemo.service;
+package com.qinhao.springsecuritydemo.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.qinhao.springsecuritydemo.mapper.UserMapper;
@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ import java.util.List;
 @Service("userDetailsService")
 public class MyUserDetailService implements UserDetailsService {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Override
