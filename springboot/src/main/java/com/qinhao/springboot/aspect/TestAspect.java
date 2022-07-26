@@ -16,7 +16,7 @@ import java.util.Arrays;
 @Component
 @Aspect
 public class TestAspect {
-    @Around("execution(* com.abc.service.*.many*(..))")
+    @Around("execution(* com.qinhao..*.*(..))")
     public Object process(ProceedingJoinPoint point) throws Throwable {
         System.out.println("@Around：执行目标方法之前...");
         //访问目标方法的参数：
@@ -31,7 +31,7 @@ public class TestAspect {
         return "原返回值：" + returnValue + "，这是返回结果的后缀";
     }
 
-    @Before("execution(* com.abc.service.*.many*(..))")
+    @Before("execution(* com.qinhao..*.*(..))")
     public void permissionCheck(JoinPoint point) {
         System.out.println("@Before：模拟权限检查...");
         System.out.println("@Before：目标方法为：" +
@@ -41,7 +41,7 @@ public class TestAspect {
         System.out.println("@Before：被织入的目标对象为：" + point.getTarget());
     }
 
-    @AfterReturning(pointcut="execution(* com.abc.service.*.many*(..))",
+    @AfterReturning(pointcut="execution(* com.qinhao..*.*(..))",
             returning="returnValue")
     public void log(JoinPoint point, Object returnValue) {
         System.out.println("@AfterReturning：模拟日志记录功能...");
@@ -55,7 +55,7 @@ public class TestAspect {
 
     }
 
-    @After("execution(* com.abc.service.*.many*(..))")
+    @After("execution(* com.qinhao..*.*(..))")
     public void releaseResource(JoinPoint point) {
         System.out.println("@After：模拟释放资源...");
         System.out.println("@After：目标方法为：" +
