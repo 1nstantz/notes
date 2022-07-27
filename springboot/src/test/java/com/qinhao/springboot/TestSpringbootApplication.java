@@ -24,7 +24,7 @@ public class TestSpringbootApplication {
     public void calTest() {
         System.out.println("spring version：" + SpringVersion.getVersion() + "springbootVersion" + SpringBootVersion.getVersion());
         System.out.println("========================");
-        String cal = calService.cal("ja", "va");
-        System.out.println("=============================="+cal);
+        int cal = calService.cal(2,2);
+        System.out.println("==============================计算结果"+cal);
     }
 }

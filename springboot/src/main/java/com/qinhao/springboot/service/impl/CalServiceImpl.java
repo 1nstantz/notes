@@ -12,8 +12,8 @@ public class CalServiceImpl implements CalService {
 
 
     @Override
-    public String cal(String x, String y) {
-        String i = x + y;
+    public int cal(int x, int y) {
+        int i = x + y;
         System.out.println("=====我被调用了=====，结果是："+i);
         return i;
     }

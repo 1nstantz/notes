@@ -6,5 +6,5 @@ package com.qinhao.springboot.service;
  */
 public interface CalService {
 
-    public String cal(String x, String y);
+    public int cal(int x, int y);
 }
