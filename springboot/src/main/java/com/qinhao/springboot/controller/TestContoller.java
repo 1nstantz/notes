@@ -3,10 +3,13 @@ package com.qinhao.springboot.controller;
 import com.qinhao.springboot.common.R;
 import com.qinhao.springboot.pojo.User;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 
 /**
@@ -27,4 +30,12 @@ public class TestContoller {
         list.add(new User(2L,"zsp",19));
         return R.ok().data("rows", list);
     }
+
+    @RequestMapping("/addUser")
+    public R addUser(@RequestBody @Validated User user) {
+        log.info(user.toString());
+        log.info("=============>controller被访问了");
+        return R.ok();
+    }
+
 }
