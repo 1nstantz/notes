@@ -30,7 +30,6 @@ public class TestContoller {
         list.add(new User(2L,"zsp",19));
         return R.ok().data("rows", list);
     }
-
     @RequestMapping("/addUser")
     public R addUser(@RequestBody @Validated User user) {
         log.info(user.toString());
