@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class Client {
     public static void main(String[] args) throws IOException {
-        RestHighLevelClient client = new RestHighLevelClient(RestClient.builder(new HttpHost("192.168.0.101", 9200, "http")));
+        RestHighLevelClient client = new RestHighLevelClient(RestClient.builder(new HttpHost("59.110.221.83", 9200, "http")));
 
 
         client.close();
