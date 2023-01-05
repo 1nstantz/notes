@@ -21,7 +21,9 @@
         <module>basis_study</module>
         <module>elasticsearch_study</module>
         <module>seata-demo</module>
+        <module>springboot/mybatis-generator</module>
     </modules>
+
 
     <build>
         <plugins>

@@ -26,4 +26,8 @@ public class User {
     @NotNull(message = "姓名不能为空")
     private String name;
     private Integer age;
+
+    public static void main(String[] args) {
+        System.out.println(1.0/2.0);
+    }
 }
